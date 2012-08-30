@@ -1,16 +1,26 @@
-========================
-HOW TO USE THIS TEMPLATE
-========================
+# Librato Play! 2.0 example
 
-* install sbt 0.11.2  if you do not have it already. You can get it from here: https://github.com/harrah/xsbt/wiki/Getting-Started-Setup
+![Librato logo](https://metrics.librato.com/assets/logo_librato-d304f00a6a4405ed87244de2b5f3e554.png)
+![Play logo](http://www.playframework.org/assets/images/logo.png)
+![Metrics logo](http://metrics.codahale.com/_static/metrics-logo.png)
 
-* execute 'sbt' and then `help play` for play specific commands
+Showing how a [Metrics](http://metrics.codahale.com/)-metered [Play! 2.0 Scala app](http://www.playframework.org/documentation/2.0.3/ScalaTodoList) can send its
+measurements to [Librato](http://librato.com) for collection, storage and visualization.
 
-* execute `sbt` and then `compile` to build the project
+# Running the example
 
-* execute `sbt` and then 'run' to run the built-in development server
+Run the following command from the command line, substituting your values where necessary:
 
-* onece the development server is running, documentation is available at http://localhost:9000/@documentation
+    LIBRATO_APIKEY="<your key>" LIBRATO_USERNAME="<your username>" ./sbt
 
+Once in the sbt console, type ```run``` and head on over to [http://localhost:9000]([http://localhost:9000) or type ```run <portnumber>``` and head on over to [http://localhost:<portnumber>]([http://localhost:<portnumber>).
 
+# Issues
 
+I'm currently working with Librto support to sort out the following issue:
+
+[https://github.com/librato/metrics-librato/issues/2](https://github.com/librato/metrics-librato/issues/2)
+
+The error I'm getting is:
+
+    [error] c.l.m.LibratoBatch - Received an error from Librato API. Code : %d, Message: %s
