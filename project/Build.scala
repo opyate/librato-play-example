@@ -8,7 +8,9 @@ object ApplicationBuild extends Build {
     val appVersion      = "1.0"
 
     val appDependencies = Seq(
-      // Add your project dependencies here,
+      "com.yammer.metrics" % "metrics-core" % "2.1.2",
+      "com.yammer.metrics" %% "metrics-scala" % "2.1.2",
+      "com.librato.metrics" % "metrics-librato" % "2.1.2.2"
     )
 
     val main = PlayProject(appName, appVersion, appDependencies, mainLang = SCALA).settings(

@@ -12,3 +12,4 @@ tmp
 mem.h2.db
 .target
 bin
+.lib
